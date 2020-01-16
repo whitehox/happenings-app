@@ -1,6 +1,6 @@
 import React from "react";
 import components from "../../components";
-import { colors, fonts } from "~/constants";
+import { colors, fonts } from "../../constants";
 const { Button } = components;
 
 import { Container, PleaseDeleteMe } from "./styles";
