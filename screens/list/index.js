@@ -1,15 +1,26 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import components from "../../components";
 import { colors, fonts } from "../../constants";
 const { Button } = components;
 
-import { Container, TextMid } from "./styles";
+import { Container, LargeText, TextMid } from "./styles";
+
+import { EVENTS } from "../../data/dummy-data";
 
 const ListScreen = props => {
+  const renderEvents = itemData => {
+    return (
+      <View>
+        <Text>{itemData.item.title}</Text>
+      </View>
+    )
+  }
+
   return (
     <Container>
-      <TextMid>Event List</TextMid>
+      <LargeText>Event List</LargeText>
+      <FlatList keyExtractor={(item, index) => item.id} numColumns={1} data={EVENTS} renderItem={renderEvents} />
     </Container>
   );
 };
