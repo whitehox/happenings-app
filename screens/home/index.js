@@ -18,6 +18,7 @@ export default Home = props => {
             fontSize: fonts.FONT_SIZE_MEDIUM,
             color: colors.BACKGROUND_COLOR,
           }}
+          onPress={() => props.navigation.navigate('ListScreen')}
         >
           Click Here
         </PleaseDeleteMe>
