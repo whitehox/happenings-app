@@ -9,6 +9,8 @@ const AppNavigator = createDrawerNavigator(
   {
     // Home Route
     HomeScreen: { screen: Screens.HomeScreen },
+    // List Route
+    ListScreen: { screen: Screens.ListScreen }
   },
 
   {
