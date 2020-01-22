@@ -12,3 +12,8 @@ export const TextMid = styled.Text`
   font-size: ${fonts.FONT_SIZE_LARGE};
   font-family: ${fonts.FONT_FAMILY_REGULAR_BOLD};
 `;
+
+export const LargeText = styled.Text`
+  font-size: ${fonts.FONT_SIZE_EXTRA_LARGE};
+  font-family: ${fonts.FONT_FAMILY_BOLD};
+`;
