@@ -1,3 +1,4 @@
 import HomeScreen from "./home";
+import ListScreen from "./list";
 
-export default { HomeScreen };
+export default { HomeScreen, ListScreen };
