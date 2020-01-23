@@ -3,7 +3,7 @@ import { FlatList } from "react-native";
 
 import EventCard from '../../components/eventCard';
 
-import { Container, LargeText, TextMid } from "./styles";
+import { Container, LargeText } from "./styles";
 
 import { EVENTS } from "../../data/dummy-data";
 
