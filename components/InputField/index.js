@@ -6,7 +6,7 @@ function InputField({ changeHandler, overloadStyles, value }) {
     <TextInput
       value={value}
       onChangeText={changeHandler}
-      style={overloadStyles}
+      styles={overloadStyles}
       testID="input"
     ></TextInput>
   );

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 export const DrawerContainer = styled.TouchableOpacity`
   width: 100%;
