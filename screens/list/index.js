@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Text, FlatList } from "react-native";
-import components from "../../components";
-import { colors, fonts } from "../../constants";
-const { Button } = components;
+import { FlatList } from "react-native";
+
+import EventCard from '../../components/eventCard';
 
 import { Container, LargeText, TextMid } from "./styles";
 
@@ -11,9 +10,7 @@ import { EVENTS } from "../../data/dummy-data";
 const ListScreen = props => {
   const renderEvents = itemData => {
     return (
-      <View>
-        <Text>{itemData.item.title}</Text>
-      </View>
+      <EventCard eventDay={itemData.item.date} eventTitle={itemData.item.title} />
     )
   }
 
