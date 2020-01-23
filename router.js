@@ -7,7 +7,10 @@ import Screens from "./screens";
 const AppNavigator = createStackNavigator(
   {
     // Home Route
-    HomeScreen: { screen: Screens.HomeScreen }
+    HomeScreen: { screen: Screens.HomeScreen },
+
+    // Detail Route
+    DetailScreen: { screen: Screens.DetailScreen }
   },
 
   {
