@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 import Card from "../card";
 import {
@@ -9,15 +10,14 @@ import {
   EventDateBox,
   EventImage,
   EventTitle,
-  eventCardStyle,
-  eventImageStyle,
   Month,
   Day,
   FavEvent,
   TitleView,
   EventMiniInfoView,
-  eventInfoRow
+  styles
 } from "./styles";
+const { eventCardStyle, eventImageStyle, eventInfoRow, eventLocation } = styles;
 import { ImageBackground } from "react-native";
 
 const EventCard = props => {
@@ -46,10 +46,7 @@ const EventCard = props => {
       <EventCardInfo>
         <Card styles={eventCardStyle}>
           <EventImage>
-            <ImageBackground
-              source={{ uri: image }}
-              style={eventImageStyle}
-            >
+            <ImageBackground source={{ uri: image }} style={eventImageStyle}>
               <TitleView>
                 <EventTitle>{title}</EventTitle>
               </TitleView>
@@ -57,7 +54,8 @@ const EventCard = props => {
           </EventImage>
           <EventMiniInfoView>
             <View style={eventInfoRow}>
-              <View>
+              <View style={eventLocation}>
+                <Ionicons name="ios-navigate" size={20} />
                 <Text>{location}</Text>
               </View>
             </View>
