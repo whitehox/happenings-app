@@ -15,7 +15,7 @@ function SideDrawer(props) {
         <Text style={{ fontFamily: 'poppins-regular' }}>Tega Oke</Text>
       </ProfileDetails>
       <View>
-        <Text onPress={navigateToScreen('HomeScreen')}>Home</Text>
+        <Text onPress={navigateToScreen('HomeScreen')}>Events</Text>
       </View>
     </DrawerContainer>
   );
