@@ -1,9 +1,13 @@
 // All app colors
 export const colors = {
   BACKGROUND_COLOR: "#FFFFFF",
+  WHITE: "#FFFFFF",
   MAP_BACKGROUND_COLOR: "#272B4A",
-  CARD_SHADOW_COLOR: "#DEE7EC",
-  FONT_COLOR: "#CCCED5"
+  CARD_SHADOW_COLOR: "#111111",
+  FONT_COLOR: "#CCCED5",
+  TEXT_COLOR: "#677181",
+  CALENDAR_COLOR: "#FF0000",
+  FAV_COLOR: "#EEEEEE"
 };
 
 // All app font sizes
