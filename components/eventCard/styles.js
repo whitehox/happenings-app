@@ -75,6 +75,7 @@ export const EventMiniInfoView = styled.View`
 export const InfoText = styled.Text`
   font-size: ${fonts.FONT_SIZE_MEDIUM};
   padding-left: 10px;
+  color: ${colors.TEXT_COLOR}
 `;
 
 export const styles = {
@@ -83,7 +84,7 @@ export const styles = {
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
     borderBottomLeftRadius: 10,
-    height: 250,
+    height: 235,
     justifyContent: 'flex-start',
   },
   eventImageStyle: {
@@ -100,5 +101,8 @@ export const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
+  },
+  iconStyle: {
+    color: `${colors.TEXT_COLOR}`
   }
 }
