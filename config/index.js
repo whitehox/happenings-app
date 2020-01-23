@@ -1,10 +1,10 @@
-import Reactotron from "reactotron-react-native";
+import Reactotron from 'reactotron-react-native';
 
-import { HAPPENINGS_BASE_URI, REACT_ENV } from "react-native-dotenv";
+import { HAPPENINGS_BASE_URI, REACT_ENV } from 'react-native-dotenv';
 
 export default { HAPPENINGS_BASE_URI, REACT_ENV };
 
-if (REACT_ENV === "development") {
+if (REACT_ENV === 'development') {
   //connect to tron debugger
   const tron = Reactotron.configure()
     .useReactNative()
