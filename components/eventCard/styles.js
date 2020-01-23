@@ -4,10 +4,14 @@ import {colors, fonts} from '../../constants';
 export const Container = styled.View`
   flex-direction: row;
   border: 1px solid;
+  width: 100%;
+  justify-content: space-between;
 `;
 
 export const EventDateBox = styled.View`
-  border: 1px solid ${colors.CARD_SHADOW_COLOR}
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 25%;
 `;
 
 export const EventDate = styled.Text`
@@ -15,7 +19,9 @@ export const EventDate = styled.Text`
 `;
 
 export const EventCardInfo = styled.View`
-  border: 1px solid ${colors.BACKGROUND_COLOR}
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 75%;
 `;
 
 export const EventTitle = styled.Text`
