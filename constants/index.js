@@ -3,7 +3,8 @@ export const colors = {
   BACKGROUND_COLOR: "#FFFFFF",
   MAP_BACKGROUND_COLOR: "#272B4A",
   CARD_SHADOW_COLOR: "#DEE7EC",
-  FONT_COLOR: "#CCCED5"
+  FONT_COLOR: "#CCCED5",
+  AVATAR_COLOR: "#FC14A7"
 };
 
 // All app font sizes
