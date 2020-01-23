@@ -22,7 +22,7 @@ export const EventDate = styled.View`
 `;
 
 export const Day = styled.Text`
-  font-size: ${fonts.FONT_SIZE_LARGE};
+  font-size: ${fonts.FONT_SIZE_EXTRA_LARGE};
   color: ${colors.WHITE};
 `;
 
@@ -36,7 +36,9 @@ export const FavEvent = styled.View`
   border-radius: 100;
   width: 50px;
   height: 50px;
-  margin-top: 10;
+  margin-top: 15;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const EventCardInfo = styled.View`
@@ -78,13 +80,20 @@ export const InfoText = styled.Text`
   color: ${colors.TEXT_COLOR}
 `;
 
+export const Explore = styled.Text`
+  font-size: ${fonts.FONT_SIZE_MEDIUM};
+  font-family: ${fonts.FONT_FAMILY_REGULAR_BOLD};
+  letter-spacing: 1;
+  color: ${colors.TEXT_COLOR};
+`;
+
 export const styles = {
   eventCardStyle: {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
     borderBottomLeftRadius: 10,
-    height: 235,
+    height: 240,
     justifyContent: 'flex-start',
   },
   eventImageStyle: {
@@ -95,7 +104,7 @@ export const styles = {
   eventInfoRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   eventFlex: {
     flexDirection: 'row',
@@ -104,5 +113,12 @@ export const styles = {
   },
   iconStyle: {
     color: `${colors.TEXT_COLOR}`
+  },
+  exploreBtn: {
+    background: 'transparent',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: `${colors.TEXT_COLOR}`,
+    minHeight: 32
   }
 }
