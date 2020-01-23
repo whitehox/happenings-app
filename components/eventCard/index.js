@@ -9,7 +9,8 @@ import {
   EventTitle,
   eventCardStyle,
   Month,
-  Day
+  Day,
+  FavEvent
 } from "./styles";
 
 const EventCard = props => {
@@ -24,6 +25,7 @@ const EventCard = props => {
           </Day>
           <Month>Feb</Month>
         </EventDate>
+        <FavEvent></FavEvent>
       </EventDateBox>
       <EventCardInfo>
         <Card styles={eventCardStyle}>
