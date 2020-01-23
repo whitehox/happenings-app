@@ -18,7 +18,7 @@ import {
   styles,
   InfoText
 } from "./styles";
-const { eventCardStyle, eventImageStyle, eventInfoRow, eventFlex } = styles;
+const { eventCardStyle, eventImageStyle, eventInfoRow, eventFlex, iconStyle } = styles;
 import { ImageBackground } from "react-native";
 
 const EventCard = props => {
@@ -56,11 +56,21 @@ const EventCard = props => {
           <EventMiniInfoView>
             <View style={eventInfoRow}>
               <View style={eventFlex}>
-                <Ionicons name="ios-navigate" size={22} />
+                <Ionicons name="ios-navigate" size={22} style={iconStyle} />
                 <InfoText>{location}</InfoText>
               </View>
               <View style={eventFlex}>
-                <Ionicons name="ios-time" size={22} />
+                <Ionicons name="ios-time" size={22} style={iconStyle} />
+                <InfoText>{time}</InfoText>
+              </View>
+            </View>
+            <View style={{...eventInfoRow, marginTop: 10}}>
+              <View style={eventFlex}>
+                <Ionicons name="ios-mal" size={22} style={iconStyle} />
+                <InfoText>{attendees.length}+ interested</InfoText>
+              </View>
+              <View style={eventFlex}>
+                <Ionicons name="ios-time" size={22} style={iconStyle} />
                 <InfoText>{time}</InfoText>
               </View>
             </View>
