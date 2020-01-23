@@ -6,7 +6,6 @@ export const Container = styled.View`
   width: 100%;
   justify-content: space-between;
   margin: 10px 0;
-  border: 1px solid ${colors.CARD_SHADOW_COLOR};
 `;
 
 export const EventDateBox = styled.View`
@@ -52,5 +51,6 @@ export const EventTitle = styled.Text`
 `;
 
 export const eventCardStyle = {
-  borderRadius: 5
+  borderRadius: 5,
+  height: 200
 };
