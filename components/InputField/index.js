@@ -7,7 +7,7 @@ function InputField({ changeHandler, overloadStyles }) {
   return (
     <TextInput
       value={value}
-      onChange={changeHandler}
+      onChangeText={changeHandler}
       style={overloadStyles}
     ></TextInput>
   );
