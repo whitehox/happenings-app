@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import Card from "../card";
+import Button from "../button";
 import {
   Container,
   EventCardInfo,
@@ -16,9 +17,17 @@ import {
   TitleView,
   EventMiniInfoView,
   styles,
-  InfoText
+  InfoText,
+  Explore
 } from "./styles";
-const { eventCardStyle, eventImageStyle, eventInfoRow, eventFlex, iconStyle } = styles;
+const {
+  eventCardStyle,
+  eventImageStyle,
+  eventInfoRow,
+  eventFlex,
+  iconStyle,
+  exploreBtn
+} = styles;
 import { ImageBackground } from "react-native";
 
 const EventCard = props => {
@@ -42,7 +51,9 @@ const EventCard = props => {
           </Day>
           <Month>Feb</Month>
         </EventDate>
-        <FavEvent></FavEvent>
+        <FavEvent>
+          <Ionicons name="ios-heart" size={30} color='#f9f9f9' />
+        </FavEvent>
       </EventDateBox>
       <EventCardInfo>
         <Card styles={eventCardStyle}>
@@ -64,14 +75,19 @@ const EventCard = props => {
                 <InfoText>{time}</InfoText>
               </View>
             </View>
-            <View style={{...eventInfoRow, marginTop: 10}}>
+            <View style={{ ...eventInfoRow, marginTop: 8, paddingBottom: 15 }}>
               <View style={eventFlex}>
-                <Ionicons name="ios-mal" size={22} style={iconStyle} />
+                <Ionicons name="ios-people" size={22} style={iconStyle} />
                 <InfoText>{attendees.length}+ interested</InfoText>
               </View>
               <View style={eventFlex}>
-                <Ionicons name="ios-time" size={22} style={iconStyle} />
-                <InfoText>{time}</InfoText>
+                <Button style={exploreBtn}>
+                  <Explore
+                     onPress={() => props.navigation.navigate("ListScreen")}
+                  >
+                    Explore
+                  </Explore>
+                </Button>
               </View>
             </View>
           </EventMiniInfoView>
