@@ -16,7 +16,7 @@ const ListScreen = props => {
 
   return (
     <Container>
-      <LargeText>Event List</LargeText>
+      <LargeText>Events List</LargeText>
       <FlatList keyExtractor={(item, index) => item.id} numColumns={1} data={EVENTS} renderItem={renderEvents} />
     </Container>
   );
