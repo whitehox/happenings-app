@@ -33,7 +33,7 @@ export const Month = styled.Text`
 `;
 
 export const FavEvent = styled.View`
-  background-color: ${colors.FONT_COLOR};
+  background-color: ${colors.FAV_COLOR};
   border-radius: 100;
   width: 50px;
   height: 50px;

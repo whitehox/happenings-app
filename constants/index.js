@@ -5,7 +5,8 @@ export const colors = {
   MAP_BACKGROUND_COLOR: "#272B4A",
   CARD_SHADOW_COLOR: "#111111",
   FONT_COLOR: "#CCCED5",
-  CALENDAR_COLOR: "#FF0000"
+  CALENDAR_COLOR: "#FF0000",
+  FAV_COLOR: "#EEEEEE"
 };
 
 // All app font sizes
