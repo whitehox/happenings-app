@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, EventCardInfo, EventDate, EventDateBox } from "./styles";
+import { Container, EventCardInfo, EventDate, EventDateBox, EventTitle } from "./styles";
 
 const EventCard = props => {
   const { eventDay, eventTitle } = props;
