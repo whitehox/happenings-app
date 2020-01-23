@@ -1,7 +1,8 @@
 module.exports = {
-  preset: 'react-native',
+  preset: 'jest-expo',
+  transformIgnorePatterns: [],
   moduleNameMapper: {
     styledComponents:
-      '<rootDir>/node_modules/styled-components/dist/styled-components.native.cjs.js',
+      'node_modules/styled-components/native/dist/styled-components.native.cjs.js',
   },
 };
