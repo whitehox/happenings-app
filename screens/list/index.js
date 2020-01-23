@@ -10,7 +10,7 @@ import { EVENTS } from "../../data/dummy-data";
 const ListScreen = props => {
   const renderEvents = itemData => {
     return (
-      <EventCard eventDay={itemData.item.date} eventTitle={itemData.item.title} />
+      <EventCard data={{...itemData.item}} />
     )
   }
 

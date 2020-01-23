@@ -1,4 +1,5 @@
 import React from "react";
+import { View, Text } from "react-native";
 
 import Card from "../card";
 import {
@@ -6,22 +7,37 @@ import {
   EventCardInfo,
   EventDate,
   EventDateBox,
+  EventImage,
   EventTitle,
   eventCardStyle,
+  eventImageStyle,
   Month,
   Day,
-  FavEvent
+  FavEvent,
+  TitleView,
+  EventMiniInfoView,
+  eventInfoRow
 } from "./styles";
+import { ImageBackground } from "react-native";
 
 const EventCard = props => {
-  const { eventDay, eventTitle } = props;
+  const {
+    icon,
+    title,
+    location,
+    time,
+    price,
+    date,
+    image,
+    attendees
+  } = props.data;
   return (
     <Container>
       <EventDateBox>
         <EventDate>
           <Day>
-            {eventDay[0]}
-            {eventDay[1]}
+            {date[0]}
+            {date[1]}
           </Day>
           <Month>Feb</Month>
         </EventDate>
@@ -29,7 +45,23 @@ const EventCard = props => {
       </EventDateBox>
       <EventCardInfo>
         <Card styles={eventCardStyle}>
-          <EventTitle>{eventTitle}</EventTitle>
+          <EventImage>
+            <ImageBackground
+              source={{ uri: image }}
+              style={eventImageStyle}
+            >
+              <TitleView>
+                <EventTitle>{title}</EventTitle>
+              </TitleView>
+            </ImageBackground>
+          </EventImage>
+          <EventMiniInfoView>
+            <View style={eventInfoRow}>
+              <View>
+                <Text>{location}</Text>
+              </View>
+            </View>
+          </EventMiniInfoView>
         </Card>
       </EventCardInfo>
     </Container>
