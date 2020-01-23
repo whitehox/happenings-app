@@ -16,4 +16,7 @@ export const TextMid = styled.Text`
 export const LargeText = styled.Text`
   font-size: ${fonts.FONT_SIZE_EXTRA_LARGE};
   font-family: ${fonts.FONT_FAMILY_BOLD};
+  text-align: left;
+  width: 50%;
+  margin-bottom: 10px
 `;
