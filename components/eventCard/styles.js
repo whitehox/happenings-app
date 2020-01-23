@@ -4,6 +4,9 @@ import {colors, fonts} from '../../constants';
 export const Container = styled.View`
   flex-direction: row;
   width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${colors.BACKGROUND_COLOR}
 `;
 
 export const EventDateBox = styled.View`
