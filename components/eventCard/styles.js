@@ -72,6 +72,11 @@ export const EventMiniInfoView = styled.View`
   padding: 10px;
 `;
 
+export const InfoText = styled.Text`
+  font-size: ${fonts.FONT_SIZE_MEDIUM};
+  padding-left: 10px;
+`;
+
 export const styles = {
   eventCardStyle: {
     borderTopLeftRadius: 10,
@@ -87,10 +92,13 @@ export const styles = {
     justifyContent: 'flex-end'
   },
   eventInfoRow: {
-    justifyContent: 'space-between'
-  },
-  eventLocation: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  eventFlex: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center'
   }
 }
