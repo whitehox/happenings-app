@@ -32,7 +32,13 @@ export const Month = styled.Text`
   color: ${colors.WHITE};
 `;
 
-export const FavEvent = styled.View``;
+export const FavEvent = styled.View`
+  background-color: ${colors.FONT_COLOR};
+  border-radius: 100;
+  width: 50px;
+  height: 50px;
+  margin-top: 10;
+`;
 
 export const EventCardInfo = styled.View`
   flex-grow: 0;
