@@ -15,9 +15,10 @@ import {
   FavEvent,
   TitleView,
   EventMiniInfoView,
-  styles
+  styles,
+  InfoText
 } from "./styles";
-const { eventCardStyle, eventImageStyle, eventInfoRow, eventLocation } = styles;
+const { eventCardStyle, eventImageStyle, eventInfoRow, eventFlex } = styles;
 import { ImageBackground } from "react-native";
 
 const EventCard = props => {
@@ -54,9 +55,13 @@ const EventCard = props => {
           </EventImage>
           <EventMiniInfoView>
             <View style={eventInfoRow}>
-              <View style={eventLocation}>
-                <Ionicons name="ios-navigate" size={20} />
-                <Text>{location}</Text>
+              <View style={eventFlex}>
+                <Ionicons name="ios-navigate" size={22} />
+                <InfoText>{location}</InfoText>
+              </View>
+              <View style={eventFlex}>
+                <Ionicons name="ios-time" size={22} />
+                <InfoText>{time}</InfoText>
               </View>
             </View>
           </EventMiniInfoView>
