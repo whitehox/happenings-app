@@ -1,23 +1,37 @@
-import { createStackNavigator } from "react-navigation-stack";
-import { createAppContainer } from "react-navigation";
-import { customHeaderStyle } from "./constants";
+import { createAppContainer } from 'react-navigation';
+import { customHeaderStyle } from './constants';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createStackNavigator } from 'react-navigation-stack';
 
-import Screens from "./screens";
+import Screens from './screens';
+import SideDrawer from './components/SideDrawer';
 
-const AppNavigator = createStackNavigator(
+const EventNavigator = createStackNavigator(
   {
     // Home Route
     HomeScreen: { screen: Screens.HomeScreen },
 
-    // Detail Route
-    DetailScreen: { screen: Screens.DetailScreen }
-  },
+    // List Route
+    ListScreen: { screen: Screens.ListScreen },
 
+    // Detail Route
+    DetailScreen: { screen: Screens.DetailScreen },
+  },
   {
-    initialRouteName: "HomeScreen",
+    initialRouteName: 'HomeScreen',
     defaultNavigationOptions: {
-      headerStyle: customHeaderStyle
-    }
+      headerStyle: customHeaderStyle,
+    },
+  }
+);
+
+const AppNavigator = createDrawerNavigator(
+  {
+    Event: EventNavigator,
+  },
+  {
+    contentComponent: SideDrawer,
+    drawerWidth: 300,
   }
 );
 

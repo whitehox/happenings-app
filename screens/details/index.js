@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import components from "../../components";
-import { colors, fonts } from "../../constants";
+import React, { useEffect } from 'react';
+import components from '../../components';
+import { colors, fonts } from '../../constants';
 const { Button, HeaderBackButton, Profile } = components;
 
-import { Container, PleaseDeleteMe } from "./styles";
+import { Container, PleaseDeleteMe } from './styles';
 
 export default function Details({ navigation, userType }) {
   useEffect(() => {
@@ -18,8 +18,8 @@ export default function Details({ navigation, userType }) {
       >
         <PleaseDeleteMe
           style={{
-            fontSize: fonts.FONT_SIZE_MEDIUM,
-            color: colors.BACKGROUND_COLOR
+            fontSize: fonts.FONT_SIZE_SMALL,
+            color: colors.BACKGROUND_COLOR,
           }}
         >
           Details Page
@@ -33,6 +33,6 @@ Details.navigationOptions = ({ navigationOptions, navigation }) => {
   return {
     headerStyle: { ...navigationOptions.headerStyle, marginHorizontal: 10 },
     headerLeft: props => <HeaderBackButton {...props} />,
-    headerRight: () => <Profile {...navigation} />
+    headerRight: () => <Profile {...navigation} />,
   };
 };
