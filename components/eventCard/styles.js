@@ -81,10 +81,12 @@ export const InfoText = styled.Text`
 `;
 
 export const Explore = styled.Text`
+  width: 100%;
   font-size: ${fonts.FONT_SIZE_MEDIUM};
   font-family: ${fonts.FONT_FAMILY_BOLD};
   letter-spacing: 1;
   color: ${colors.TEXT_COLOR};
+  text-align: center;
 `;
 
 export const styles = {
