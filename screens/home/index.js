@@ -1,7 +1,7 @@
 import React from 'react';
 import components from '../../components';
 import { colors, fonts } from '../../constants';
-const { Button, InputField, SideDrawer } = components;
+const { Button, InputField } = components;
 
 import { Container, PleaseDeleteMe } from './styles';
 

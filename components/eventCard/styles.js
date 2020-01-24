@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { fonts, colors } from "../../constants";
+import styled from 'styled-components';
+import { fonts, colors } from '../../constants';
 
 export const Container = styled.View`
   flex-direction: row;
@@ -77,14 +77,16 @@ export const EventMiniInfoView = styled.View`
 export const InfoText = styled.Text`
   font-size: ${fonts.FONT_SIZE_MEDIUM};
   padding-left: 10px;
-  color: ${colors.TEXT_COLOR}
+  color: ${colors.TEXT_COLOR};
 `;
 
 export const Explore = styled.Text`
+  width: 100%;
   font-size: ${fonts.FONT_SIZE_MEDIUM};
-  font-family: ${fonts.FONT_FAMILY_REGULAR_BOLD};
+  font-family: ${fonts.FONT_FAMILY_BOLD};
   letter-spacing: 1;
   color: ${colors.TEXT_COLOR};
+  text-align: center;
 `;
 
 export const styles = {
@@ -99,7 +101,7 @@ export const styles = {
   eventImageStyle: {
     width: '100%',
     height: 150,
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   eventInfoRow: {
     flexDirection: 'row',
@@ -109,16 +111,16 @@ export const styles = {
   eventFlex: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   iconStyle: {
-    color: `${colors.TEXT_COLOR}`
+    color: `${colors.TEXT_COLOR}`,
   },
   exploreBtn: {
     background: 'transparent',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: `${colors.TEXT_COLOR}`,
-    minHeight: 32
-  }
-}
+    minHeight: 32,
+  },
+};

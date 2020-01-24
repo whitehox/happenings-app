@@ -1,9 +1,10 @@
-import React from "react";
-import { View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import React from 'react';
+import { View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
-import Card from "../card";
-import Button from "../button";
+import Card from '../card';
+import Button from '../button';
+
 import {
   Container,
   EventCardInfo,
@@ -18,17 +19,19 @@ import {
   EventMiniInfoView,
   styles,
   InfoText,
-  Explore
-} from "./styles";
+  Explore,
+} from './styles';
+
 const {
   eventCardStyle,
   eventImageStyle,
   eventInfoRow,
   eventFlex,
   iconStyle,
-  exploreBtn
+  exploreBtn,
 } = styles;
-import { ImageBackground } from "react-native";
+
+import { ImageBackground } from 'react-native';
 
 const EventCard = props => {
   const {
@@ -39,7 +42,7 @@ const EventCard = props => {
     price,
     date,
     image,
-    attendees
+    attendees,
   } = props.data;
   return (
     <Container>
@@ -52,7 +55,7 @@ const EventCard = props => {
           <Month>Feb</Month>
         </EventDate>
         <FavEvent>
-          <Ionicons name="ios-heart" size={30} color='#f9f9f9' />
+          <Ionicons name="ios-heart" size={30} color="#f9f9f9" />
         </FavEvent>
       </EventDateBox>
       <EventCardInfo>
@@ -83,7 +86,7 @@ const EventCard = props => {
               <View style={eventFlex}>
                 <Button style={exploreBtn}>
                   <Explore
-                     onPress={() => props.navigation.navigate("ListScreen")}
+                    onPress={() => props.navigation.navigate('DetailScreen')}
                   >
                     Explore
                   </Explore>

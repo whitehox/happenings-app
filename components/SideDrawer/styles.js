@@ -1,4 +1,5 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components';
+import { fonts } from '../../constants';
 
 export const DrawerContainer = styled.TouchableOpacity`
   width: 100%;
@@ -18,7 +19,7 @@ export const ProfileDetails = styled.View`
   padding-top: 30;
   padding-bottom: 30;
   align-items: center;
-  font-family: noto-sans-bold;
+  font-family: ${fonts.FONT_FAMILY_BOLD};
   font-weight: bold;
 `;
 

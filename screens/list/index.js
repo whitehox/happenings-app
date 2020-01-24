@@ -1,23 +1,26 @@
-import React from "react";
-import { FlatList } from "react-native";
+import React from 'react';
+import { FlatList } from 'react-native';
+import components from '../../components';
 
-import EventCard from '../../components/eventCard';
+import { Container, LargeText } from './styles';
+const { EventCard } = components;
 
-import { Container, LargeText } from "./styles";
-
-import { EVENTS } from "../../data/dummy-data";
+import { EVENTS } from '../../data/dummy-data';
 
 const ListScreen = props => {
   const renderEvents = itemData => {
-    return (
-      <EventCard data={{...itemData.item}} />
-    )
-  }
+    return <EventCard data={{ ...itemData.item }} {...props} />;
+  };
 
   return (
     <Container>
       <LargeText>Events List</LargeText>
-      <FlatList keyExtractor={(item, index) => item.id} numColumns={1} data={EVENTS} renderItem={renderEvents} />
+      <FlatList
+        keyExtractor={(item, index) => item.id}
+        numColumns={1}
+        data={EVENTS}
+        renderItem={renderEvents}
+      />
     </Container>
   );
 };

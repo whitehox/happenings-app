@@ -10,24 +10,29 @@ const EventNavigator = createStackNavigator(
   {
     // Home Route
     HomeScreen: { screen: Screens.HomeScreen },
+
     // List Route
-    ListScreen: { screen: Screens.ListScreen }
+    ListScreen: { screen: Screens.ListScreen },
+
+    // Detail Route
+    DetailScreen: { screen: Screens.DetailScreen },
   },
   {
     initialRouteName: 'HomeScreen',
     defaultNavigationOptions: {
       headerStyle: customHeaderStyle,
     },
-  },
+  }
 );
 
-const AppNavigator = createDrawerNavigator({
-  Event: EventNavigator
-},
-{
-  contentComponent: SideDrawer,
-  drawerWidth: 300,
-}
-)
+const AppNavigator = createDrawerNavigator(
+  {
+    Event: EventNavigator,
+  },
+  {
+    contentComponent: SideDrawer,
+    drawerWidth: 300,
+  }
+);
 
 export default AppRoutes = createAppContainer(AppNavigator);
